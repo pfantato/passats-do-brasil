@@ -1,17 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
+import Img from 'gatsby-image';
 
+import '../scss/blog-post.scss'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
-import Img from 'gatsby-image';
-import '../scss/blog-post.scss'
+import dragSlider from "../utils/dragSlider";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  const images = data.images.images;
+  const images = data.images.images; 
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    const slider = document.getElementById('slider');
+    const wrapper = document.getElementById('slider_wrapper');
+    const bar = document.getElementById('slider-indicator_bar');
+    const items = document.getElementsByClassName('super-slider_item');
+    dragSlider(slider, wrapper, bar, items);
+  });
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -21,39 +30,37 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
+          <h1 class="carName">
             {post.frontmatter.title}
           </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
+          <p class="carValue">
+            {post.frontmatter.value}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
+        <h3>Imagens</h3>
+        <div className="wrapper">
+          <div className="slider-indicator">
+            <div id="slider-indicator_bar">
+            </div>
+          </div>
+          <nav className="menu">
+            <div id="slider_wrapper" className="menu__wrapper">
+              <ul id="slider" className="menu__menu">
+                {images.map(image => (
+                  <li className="super-slider_item">
+                    <div className="menu__item">
+                      <Img alt={image.name} fluid={image.childImageSharp.fluid} />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+        </div>
       </article>
 
-      <div className="imagesWrapper">
-        {images.map(image => {
-          return (<div class="card">
-            <Img alt={image.name} fluid={image.childImageSharp.fluid} />
-          </div>)
-        })}
-      </div>
 
       <nav>
         <ul
@@ -102,6 +109,14 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        value
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     images: allFile(filter: {extension: {in: ["jpg", "png", "jpeg"]}, relativeDirectory: {eq: $relativePath}}) {
@@ -110,7 +125,7 @@ export const pageQuery = graphql`
         name
         extension
         childImageSharp {
-          fluid(maxWidth: 300, quality: 50) {
+          fluid(maxWidth: 1200, quality: 100) {
             src
             srcSet
             aspectRatio

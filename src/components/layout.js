@@ -48,22 +48,15 @@ const Layout = ({ location, title, children }) => {
     )
   }
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
+    <>
+      <header className="main-header">{header}</header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Powered by
         {` `}
         <a href="https://vagalume.digital">Vagalume Digital</a>
       </footer>
-    </div>
+    </>
   )
 }
 
