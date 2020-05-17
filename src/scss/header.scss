@@ -7,7 +7,7 @@
 }
 
 #title {
-	font-size: 75px;
+	font-size: 4.167rem;
 }
 
 .tagline_box {
@@ -28,7 +28,7 @@
 
 .textmain {
 	color: #333232;
-	font-size: 20px;
+	font-size: 1.111rem;
 	font-family: "Lato", sans-serif;
 	text-align: center;
 }
@@ -73,7 +73,6 @@ a {
 
 .link {
 	position: relative;
-	align: right;
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-right: 20px;
@@ -81,4 +80,17 @@ a {
 
 #about {
 	padding-left: 30px;
+}
+
+@media only screen and (max-width: 780px) {
+	.main-header {
+		align-items: center;
+		justify-content: center;
+	}
+	#title {
+		line-height: 100%;
+	}
+	.navtitle {
+		margin-bottom: 2rem;
+	}
 }

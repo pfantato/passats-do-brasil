@@ -265,3 +265,27 @@ $scrollBarHide: 1em;
   //width: 200px;
   background-color: #333232;
 }
+
+
+@media only screen and (max-width: 780px) {
+  .menu {
+    position: relative;
+    &__item {
+      width: 300px;
+    }
+  } 
+  .text-hover-img figcaption {
+    h1 {
+      font-size: 1.5rem;
+      line-height: 120%;
+      margin-top: 0;
+    }
+    p {
+      line-height: 120%;
+      margin: 0 0 1rem;
+    }
+    a {
+      padding: .5rem 2rem;
+    }
+  }
+}

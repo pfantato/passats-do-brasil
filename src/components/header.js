@@ -16,7 +16,7 @@ const Header = ({ location, title }) => {
                 <Link to="/" className="textmain navtitle">
                     <Image filename="logo.png" /> <span>{title}</span>
                 </Link>
-                <a href="mailto:passatsdobrasil@gmail.com" rel="noreferrer" target="_blank" className="link textmain"> passatsdobrasil@gmail.com </a>
+                <p className="link textmain">contato: <a href="mailto:passatsdobrasil@gmail.com" rel="noreferrer" target="_blank">passatsdobrasil@gmail.com</a></p>
             </div>
             <div className="title">
                 <b id="title" className="textmain">{title}</b>
@@ -34,7 +34,7 @@ const Header = ({ location, title }) => {
                 <Link to="/" className="textmain navtitle">
                     <Image filename="logo.png" /> <span>{title}</span>
                 </Link>
-                <a href="mailto:passatsdobrasil@gmail.com" rel="noreferrer" target="_blank" className="link textmain"> passatsdobrasil@gmail.com </a>
+                <p className="link textmain">contato: <a href="mailto:passatsdobrasil@gmail.com" rel="noreferrer" target="_blank">passatsdobrasil@gmail.com</a></p>
             </div>
         </>
     )
