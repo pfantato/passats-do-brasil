@@ -4,9 +4,9 @@
   max-width: 100%;
   padding: 1vh;
 }
-$bgMenu: #333232;
-$fontColor: #fff;
-$bgItem: #333232;
+$bgMenu: #fff;
+$fontColor: #333232;
+$bgItem: #fff;
 $fakePadding: 1em;
 $scrollBarHide: 1em;
 // TODO: Add a little intro animation that "scroll" right to show to the user that there are more content
@@ -182,7 +182,7 @@ $scrollBarHide: 1em;
   
   figcaption {
     align-items: center;
-    color: $fontColor;
+    color: $bgItem;
     display: flex;
     filter: blur(5px);
     flex-flow: column;
@@ -198,16 +198,16 @@ $scrollBarHide: 1em;
     h1 {
       position: relative;
       display: inline-block;
-      overflow-wrap: break-word;
-      text-align: center;
+      line-height: 150%;
       max-width: 100%;
-      width: 100%;
-      word-wrap: break-word;
+      text-align: center;
+      white-space: pre-wrap;
+      width: 80%;
       &::after {
         content: " ";
         width: 0%;
         position: absolute;
-        border-bottom: 3px solid $fontColor;
+        border-bottom: 3px solid $bgItem;
         left: 50%;
         bottom: 0%;
         transition: all .4s ease-in-out .2s;
@@ -219,15 +219,15 @@ $scrollBarHide: 1em;
       margin: 0 0 2rem;
     }
     a {
-      border: 1px solid $fontColor;
-      color: $fontColor;
+      border: 1px solid $bgItem;
+      color: $bgItem;
       cursor: pointer;
       padding: 1rem 3rem;
       transition: all .4s ease-in-out;
       &:hover {
-        border: 1px solid $fontColor;
-        background-color: $fontColor;
-        color: $bgItem;
+        border: 1px solid $bgItem;
+        background-color: $bgItem;
+        color: $fontColor;
       }
     }
   }
@@ -256,12 +256,12 @@ $scrollBarHide: 1em;
 
 .slider-indicator {
   height: 2px;
-  background-color: #535352;
+  background-color: #efefef;
   margin-bottom: 50px;
 }
 
 #slider-indicator_bar {
   height: 100%;
   //width: 200px;
-  background-color: white;
+  background-color: #333232;
 }
