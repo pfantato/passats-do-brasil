@@ -198,7 +198,11 @@ $scrollBarHide: 1em;
     h1 {
       position: relative;
       display: inline-block;
+      overflow-wrap: break-word;
       text-align: center;
+      max-width: 100%;
+      width: 100%;
+      word-wrap: break-word;
       &::after {
         content: " ";
         width: 0%;

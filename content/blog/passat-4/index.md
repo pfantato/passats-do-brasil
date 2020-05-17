@@ -1,5 +1,5 @@
 ---
-title: Passat 88/89 preto clássico
+title: Passat GTS Pointer 88/89 preto clássico
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 4
 value: R$89.990,00
@@ -9,7 +9,7 @@ featuredImage: Foto 1.jpeg
 ## História
 
 Carro adquirido no interior de Minas Gerais no ano de 2012.
-O carro foi totalmente desmontado, para reparo de funilaria, pintura e mecânica. Após um ano de serviços o carro foi finalizado, como observado nas fotos. Minha inteção foi seguir com a maior parte de peças originais do carro (faróis, lanternas, parachoques e interior) que mantiveram-se preservados.
+O veículo foi totalmente desmontado, para reparo de funilaria, pintura e mecânica. Após um ano de serviços ele foi finalizado, como observado nas fotos. A inteção foi seguir com a maior parte de peças originais do carro (faróis, lanternas, parachoques e interior) que mantiveram-se preservados.
 
 ## Descrição técnica
 

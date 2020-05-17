@@ -48,7 +48,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <nav className="menu">
             <div id="slider_wrapper" className="menu__wrapper">
               <ul id="slider" className="menu__menu">
-                {images.map(image => (
+                {images.sort(( a, b ) => (( a.name < b.name ) ? -1 : ( a.name > b.name ) ? 1 : 0)).map(image => (
                   <li className="super-slider_item">
                     <div className="menu__item">
                       <Img alt={image.name} fluid={image.childImageSharp.fluid} />
