@@ -58,15 +58,15 @@ module.exports = {
         name: `Passats do Brasil`,
         short_name: `Passats Brasil`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#333232`,
-        display: `minimal-ui`,
+        background_color: `#FFFFFF`,
+        theme_color: `#2D2D2D`,
+        display: `standalone`,
         icon: `content/assets/logo-light.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
