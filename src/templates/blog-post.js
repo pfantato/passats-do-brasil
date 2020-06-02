@@ -2,87 +2,69 @@ import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 import Img from 'gatsby-image';
 
-import '../scss/blog-post.scss'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import dragSlider from "../utils/dragSlider";
 
+import styles from './blog-post.module.css';
+console.log(styles)
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const title = data.site.siteMetadata.title;
+  const description = data.site.siteMetadata.description;
   const { previous, next } = pageContext
   const images = data.images.images; 
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    const slider = document.getElementById('slider');
-    const wrapper = document.getElementById('slider_wrapper');
-    const bar = document.getElementById('slider-indicator_bar');
-    const items = document.getElementsByClassName('super-slider_item');
-    dragSlider(slider, wrapper, bar, items);
-  });
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   const slider = document.getElementById('slider');
+  //   const wrapper = document.getElementById('slider_wrapper');
+  //   const bar = document.getElementById('slider-indicator_bar');
+  //   const items = document.getElementsByClassName('super-slider_item');
+  //   dragSlider(slider, wrapper, bar, items);
+  // });
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} style={styles.layout} title={title} description={description}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article class="car">
+      <article className={styles.car}>
         <header>
-          <h1 class="carName">
+          <h1 className={styles.carName}>
             {post.frontmatter.title}
           </h1>
-          <p class="carValue">
+          <p className={styles.carValue}>
             {post.frontmatter.value}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <h3>Imagens</h3>
-        <div className="wrapper">
-          <div className="slider-indicator">
-            <div id="slider-indicator_bar">
+        <h2>Imagens</h2>
+        <div className={styles.images_grid}>
+          {images.sort(( a, b ) => (( a.name < b.name ) ? -1 : ( a.name > b.name ) ? 1 : 0)).map((image, index) => (
+            <div className={styles.images_grid__image} key={index}>
+              <Img alt={image.name} fluid={image.childImageSharp.fluid} />
             </div>
-          </div>
-          <nav className="menu">
-            <div id="slider_wrapper" className="menu__wrapper">
-              <ul id="slider" className="menu__menu">
-                {images.sort(( a, b ) => (( a.name < b.name ) ? -1 : ( a.name > b.name ) ? 1 : 0)).map(image => (
-                  <li className="super-slider_item">
-                    <div className="menu__item">
-                      <Img alt={image.name} fluid={image.childImageSharp.fluid} />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </nav>
+          ))}
         </div>
       </article>
 
 
       <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
+        <ul className={styles.bottom_navbar}>
+          <li className={styles.bottom_navbar__link}>
             {next && (
-              <Link to={next.fields.slug} rel="prev">
-                ← {next.frontmatter.title}
+              <Link to={next.fields.slug} className={styles.bottom_navbar__link__prev} rel="prev">
+                &lt; {next.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="next">
-                {previous.frontmatter.title} →
+              <Link className={styles.bottom_navbar__link} className={styles.bottom_navbar__link__next} to={previous.fields.slug} rel="next">
+                {previous.frontmatter.title} &gt;
               </Link>
             )}
           </li>
@@ -99,6 +81,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Passats do Brasil`,
-    description: `Carros de colecionador à venda!`,
+    description: `Uma coleção exclusiva de um aficcionado por carros.`,
     siteUrl: `https://passatsdobrasil.com.br/`
   },
   plugins: [
@@ -61,16 +61,10 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#333232`,
         display: `minimal-ui`,
-        icon: `content/assets/favicon.png`,
+        icon: `content/assets/logo-light.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

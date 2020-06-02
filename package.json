@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "passats-do-brasil",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "description": "Showcase dos carros da coleção do Passats do Brasil",
+  "version": "1.0.0",
+  "author": "Vagalume Digital <ola@vagalume.digital>",
   "dependencies": {
     "@pacote/eslint-config": "^2.0.2",
     "@pacote/eslint-config-react": "^1.0.6",
@@ -35,6 +32,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.10.0",
     "react-scroll": "^1.7.16",
     "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.72",
@@ -45,15 +43,17 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://passatsdobrasil.com.br",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "carros",
+    "passat",
+    "colecionador"
   ],
   "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/patrickcfantato/passats-do-brasil.git"
   },
   "scripts": {
     "build": "gatsby build",

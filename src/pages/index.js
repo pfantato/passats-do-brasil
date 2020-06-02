@@ -1,60 +1,49 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from 'gatsby-image';
 
-import '../scss/home.scss'
+import styles from './index.module.css'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import dragSlider from "../utils/dragSlider";
+import Image from "../components/image"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges;
-
-  useEffect(() => {
-    // Update the document title using the browser API
-    const slider = document.getElementById('slider');
-    const wrapper = document.getElementById('slider_wrapper');
-    const bar = document.getElementById('slider-indicator_bar');
-    const items = document.getElementsByClassName('super-slider_item');
-    dragSlider(slider, wrapper, bar, items);
-  });
+  const title = data.site.siteMetadata.title;
+  const description = data.site.siteMetadata.description;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title} description={description}>
       <SEO title="Todos os carros" />
-      <div className="wrapper">
-        <div className="slider-indicator">
-          <div id="slider-indicator_bar">
-          </div>
-        </div>
-        <nav className="menu">
-          <div id="slider_wrapper" className="menu__wrapper">
-            <ul id="slider" className="menu__menu">
-              {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug
-                const price = node.frontmatter.value || 'Sob consulta'
-                const featuredImage = node.frontmatter.featuredImage
-                return (
-                  <li className="super-slider_item">
-                    <div className="menu__item">
-                      <figure className="text-hover-img">
-                        <Img alt={featuredImage.name} fluid={featuredImage.childImageSharp.fluid} />
-                        <figcaption>
-                          <h1>{title}</h1>
-                          <p>{price}</p>
-                          <Link to={node.fields.slug}>
-                            Ver detalhes
-                          </Link>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+
+      <div className={styles.cars_grid}>
+        <nav className={styles.cars_grid__header}>
+          <h2 className={styles.cars_grid__header__title}>Conheça a coleção</h2>
+          <span className={styles.cars_grid__header__indicator}>
+            Mostrando { posts.length } de { posts.length }
+          </span> 
         </nav>
+        <section className={styles.cars_grid__content}>
+          {posts.sort(( a, b ) => {
+            console.log(a.node.fields.slug);
+            return (( a.node.fields.slug < b.node.fields.slug ) ? -1 : ( a.node.fields.slug > b.node.fields.slug ) ? 1 : 0)
+          }).map(({ node }, index) => {
+            const title = node.frontmatter.title || node.fields.slug
+            const price = node.frontmatter.value || 'Sob consulta'
+            // console.log(featuredImage);
+            const featuredImage = node.frontmatter.featuredImage
+            const image = featuredImage ? <Image filename={ featuredImage?.relativeDirectory + `/` + featuredImage?.childImageSharp.fluid.originalName } className={styles.cars_grid__content__car__figure__image} /> : '';
+            return (
+              <div className={styles.cars_grid__content__car} key={index} >
+                <Link className={styles.cars_grid__content__car__image} to={node.fields.slug}>
+                  {image}
+                </Link>
+                <Link className={styles.cars_grid__content__car__description} to={node.fields.slug}>
+                  <h2 className={styles.cars_grid__content__car__description__car_name}>{title}</h2>
+                  <p className={styles.cars_grid__content__car__description__car_price}>{price}</p>
+                </Link>
+              </div>
+            )})}
+        </section>
       </div>
     </Layout>
   )
@@ -67,6 +56,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -81,9 +71,11 @@ export const pageQuery = graphql`
             value
             featuredImage {
               name
+              relativeDirectory
               childImageSharp {
                 fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid
+                  originalName
                 }
               }
             }

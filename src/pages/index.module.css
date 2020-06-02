@@ -1,0 +1,78 @@
+.cars_grid {
+  align-self: center;
+  display: grid;
+  grid-template-areas: 
+    'header'
+    'content'
+    'footer';
+  max-width: 1920px;
+  width: 100%;
+}
+
+.cars_grid__header {
+  align-items: baseline;
+  display: flex;
+  flex-flow: row wrap;
+  grid-area: header;
+  justify-content: space-between;
+  padding: 3vh 0 1.5rem; 
+}
+.cars_grid__header__title {
+  color: var(--deep-black);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.cars_grid__header__indicator {}
+
+.cars_grid__content {
+  grid-area: content;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3 , 1fr);
+}
+.cars_grid__content__car {
+  box-shadow: 0 3px 6px rgba(45,45,45,0.16), 0 3px 6px rgba(45,45,45,0.23);
+  display: block;
+  transition: box-shadow .25s ease-in-out;
+}
+.cars_grid__content__car:hover {
+  box-shadow: 0 14px 28px rgba(45,45,45,0.25), 0 10px 10px rgba(45,45,45,0.22);
+}
+.cars_grid__content__car__image {
+  display: block;
+}
+.cars_grid__content__car__description {
+  display: block;
+  padding: 1.5rem 1rem 1rem;
+}
+.cars_grid__content__car__description__car_name {
+  color: var(--deep-black);
+  font-family: 'cubano', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  margin: 0;
+}
+.cars_grid__content__car__description__car_price {
+  color: var(--gray);
+  font-family: 'cubano', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cars_grid__footer {
+  grid-area: footer;
+}
+.cars_grid__footer__navigation {}
+.cars_grid__footer__navigation__link {}
+
+@media only screen and (max-width: 1024px) {
+  .cars_grid__content {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+}
+@media only screen and (max-width: 465px) {
+  .cars_grid__content {
+    grid-template-columns: 1fr;
+  } 
+}

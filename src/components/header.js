@@ -1,47 +1,56 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
-import Image from "./image";
-import "../scss/header.scss";
+import Image from "./image"
+import "../scss/header.scss"
 
-const Header = ({ location, title }) => {
+const Header = ({ location, title, description }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
   if (location.pathname === rootPath) {
     header = (
-        <>
-            <div className="nav">
-                <Link to="/" className="textmain navtitle">
-                    <Image filename="logo.png" /> <span>{title}</span>
-                </Link>
-                <p className="link textmain">contato: <a href="mailto:passatsdobrasil@gmail.com" rel="noreferrer" target="_blank">passatsdobrasil@gmail.com</a></p>
-            </div>
-            <div className="title">
-                <b id="title" className="textmain">{title}</b>
-                <br />
-                <div className="tagline_box">
-                    <p className="tagline textmain">Uma coleção exclusiva de um aficcionado por carros.</p>
-                </div>
-            </div>
-        </>
+      <>
+      <div className="header__main">
+        <div className="header__main__logo__link">
+          <Image className="header__main__logo__link__image" filename="logo-dark.png" />
+          <div className="header__main__logo__link__meta">
+            <span className="header__main__logo__link__meta__title">{title}</span>
+            <span className="header__main__logo__link__meta__slogan">{description}</span>
+          </div>
+        </div>
+      </div>
+      </>
     )
   } else {
     header = (
-        <>
-            <div className="nav">
-                <Link to="/" className="textmain navtitle">
-                    <Image filename="logo.png" /> <span>{title}</span>
-                </Link>
-                <p className="link textmain">contato: <a href="mailto:passatsdobrasil@gmail.com" rel="noreferrer" target="_blank">passatsdobrasil@gmail.com</a></p>
-            </div>
-        </>
+      <>
+        <div className="header__inside">
+          <Link to="/" className="header__inside__back_button">
+            &lt; Todos os carros
+          </Link>
+          <div className="header__inside__logo__link">
+            <Image className="header__inside__logo__link__image" filename="logo-light.png" />
+          <div className="header__inside__logo__link__meta">
+            <span className="header__inside__logo__link__meta__title">{title}</span>
+            <span className="header__inside__logo__link__meta__slogan">{description}</span>
+          </div>
+          </div>
+          <a
+            className="header__inside__contact"
+            href="mailto:passatsdobrasil@gmail.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            ENVIAR E-MAIL
+          </a>
+        </div>
+      </>
     )
   }
   return (
     <>
-        <header className="main-header">{header}</header>
+      <header className="header">{header}</header>
     </>
   )
 }

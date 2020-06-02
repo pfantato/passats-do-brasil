@@ -1,96 +1,132 @@
-
-
-.title {
-	text-align: center;
-	padding-top: 7%;
-	padding-bottom: 10%;
-}
-
-#title {
-	font-size: 4.167rem;
-}
-
-.tagline_box {
-	margin-top: 10px;
-}
-
-.tagline {
-	display: inline-block;
-	margin: 0px;
-}
-
-.main-header {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-}
-
-.textmain {
-	color: #333232;
-	font-size: 1.111rem;
-	font-family: "Lato", sans-serif;
-	text-align: center;
-}
-
-#name {
-	position: relative;
-	opacity: 1;
-}
-
-.nav {
-	overflow: hidden;
-	text-align: right;
-	width: 100%;
-	border: none;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.navtitle {
+.header {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+  width: 100vw;
+  &__inside,
+  &__main {
     align-items: center;
     display: flex;
-	float: left;
     justify-content: space-between;
-    padding-left: 20px;
-    .gatsby-image-wrapper {
-        display: inline-block;
-        margin-right: 1rem;
-        width: 120px;
-        img {
-            width: 100%;
+    padding: 2vh 10vw;
+    width: 100%;
+    &__logo__link {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      &__image {
+        height: auto;
+        width: 6rem;
+      }
+      &__meta {
+        display: flex;
+        flex-flow: column wrap;
+        margin-left: 1rem;
+        &__title {
+          font-family: "cubano", sans-serif;
+          font-size: 2.1rem;
+          font-style: italic;
+          font-weight: 400;
+          letter-spacing: 2px;
         }
+        &__slogan {
+          font-family: "gin", serif;
+          font-weight: 400;
+          font-size: 0.7rem;
+          letter-spacing: 1px;
+        }
+      }
     }
-    span {
-        display: inline-block;
+    &__back_button,
+    &__contact {
+      font-family: "gin", serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      &:hover {
+        color: var(--light-black);
+      }
     }
+  }
+  &__main {
+    align-items: flex-start;
+    background-image: url("../../content/assets/cover.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    height: 900px;
+    padding: 2vh 0;
+    &__logo__link {
+      &__image {
+        width: 12rem;
+      }
+      &__meta {
+        &__title {
+          font-size: 3rem;
+        }
+        &__slogan {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
-
-a {
-	text-decoration: none;
-	cursor: pointer;
+@media only screen and (max-width: 1440px) {
+  .header__main {
+    height: 768px;
+    &__logo__link__image { width: 9rem; }
+  }
 }
-
-.link {
-	position: relative;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 20px;
+@media only screen and (max-width: 1024px) {
+  .header {
+    &__inside,
+    &__main {
+      &__logo__link {
+        &__image {
+          width: 6rem;
+        }
+        &__meta {
+          &__title {
+            font-size: 1.5rem;
+          }
+          &__slogan {
+            font-size: .8rem;
+          }
+        }
+      }
+      &__back_button,
+      &__contact {
+        font-size: 1rem;
+      }
+    }
+    &__main {
+      height: 680px;
+    }
+  }
 }
-
-#about {
-	padding-left: 30px;
+@media only screen and (max-width: 768px) {
+  .header {
+    &__inside,
+    &__main {
+      padding: 2vh 5vw;
+      &__logo__link {
+        &__image {
+          width: 5rem;
+        }
+      }
+    }
+    &__inside__meta { display: none; }
+    &__main {
+      height: 394px;
+    }
+  }
 }
-
-@media only screen and (max-width: 780px) {
-	.main-header {
-		align-items: center;
-		justify-content: center;
-	}
-	#title {
-		line-height: 100%;
-	}
-	.navtitle {
-		margin-bottom: 2rem;
-	}
+@media only screen and (min-width: 1921px) {
+  .header {
+    &__main {
+      height: 1080px;
+    }
+  }
 }

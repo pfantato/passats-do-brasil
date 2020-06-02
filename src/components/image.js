@@ -14,7 +14,7 @@ const Image = props => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 300, quality: 50) {
+                fluid(maxWidth: 3840, quality: 100) {
                   src
                   srcSet
                   aspectRatio
@@ -34,9 +34,8 @@ const Image = props => (
       if (!image) {
         return null;
       }
-
       //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
-      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />;
+      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} className={props.className} />;
     }}
   />
 );
