@@ -1,119 +1,142 @@
 .layout {
-    align-items: center;
-    background-color: var(--deep-black);
-    color: var(--white);
-    display: flex;
-    flex-flow: column wrap;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    justify-content: center;
-    padding: 0;
-    min-height: 100vh;
-    width: 100vw;
+  align-items: center;
+  background-color: var(--deep-black);
+  color: var(--white);
+  display: flex;
+  flex-flow: column wrap;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
 }
 .car {
-    display: flex;
-    flex-flow: column;
+  display: flex;
+  flex-flow: column;
 }
 .carName {
-    font-size: 3.2rem;
-    letter-spacing: 2px;
-    margin: 4.5rem 0 0;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  margin: 4.5rem 0 0;
 }
 .carValue {
-    color: var(--light-black);
-    font-family: "cubano", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.4rem;
-    letter-spacing: 1px;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+  color: var(--light-black);
+  font-family: "cubano", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 h1 {
-    font-family: "cubano", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2rem;
+  font-family: "cubano", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
 }
-h2 { 
-    color: var(--white);
-    font-family: gin, serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-top: 1.5rem;
+h2 {
+  color: var(--white);
+  font-family: gin, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 1.5rem;
 }
 p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
 }
-.images_grid {
-    display: grid;
-    gap: .8rem;
-    grid-template-columns: repeat(4, 1fr);
+/* .images_grid {
+  align-items: center;
+  column-count: 4;
+  column-gap: 0.8rem;
+  justify-content: center;
 }
+.images_grid__image {
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  width: 100%;
+} */
 .bottom_navbar {
-    color: var(--white);
-    display: flex;
-    font-family: 'gin', serif;
-    flex-wrap: 'wrap';
-    list-style: none;
-    justify-content: space-between;
-    letter-spacing: 1px;
-    margin: 1.5rem 0 0;
-    padding: 0;
-    width: 100%;
+  color: var(--white);
+  display: flex;
+  font-family: "gin", serif;
+  flex-wrap: "wrap";
+  list-style: none;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  width: 100%;
 }
 .bottom_navbar__link,
 .bottom_navbar__link:-webkit-any-link {
-    color: var(--white); 
+  color: var(--white);
 }
 .bottom_navbar__link:hover {
-    color: var(--light-black);
+  color: var(--light-black);
 }
-@media only screen and (max-width: 1024px) {
-    .images_grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+/* @media only screen and (max-width: 1024px) {
+  .images_grid {
+    column-count: 3;
+  }
+} */
 @media only screen and (max-width: 768px) {
-    .car {
-        padding: 0 3vw;
-    }
-    .carName {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-    .carValue {
-        font-size: 1.4rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-    .carValue {
-        text-align: center;
-    }
-    p {
-        padding: 0;
-    }
-    .images_grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .car {
+    padding: 0 3vw;
+  }
+  .carName {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .carValue {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .carValue {
+    text-align: center;
+  }
+  p {
+    padding: 0;
+  }
+  /* .images_grid {
+    column-count: 2;
+  } */
 }
 @media only screen and (max-width: 465px) {
-    .images_grid {
-        grid-template-columns: 1fr;
-    }
-    .bottom_navbar {
-        flex-flow: column wrap;
-    }
-    .bottom_navbar__link {
-        margin: 1.5rem 0;
-    }
-    .bottom_navbar__link__next {
-        display: block;
-        text-align: right;
-    }
+  /* .images_grid {
+    column-count: 1;
+  } */
+  .bottom_navbar {
+    flex-flow: column wrap;
+  }
+  .bottom_navbar__link {
+    margin: 1.5rem 0;
+  }
+  .bottom_navbar__link__next {
+    display: block;
+    text-align: right;
+  }
 }
+
+
+.my_masonry_grid {
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+  .my_masonry_grid__column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my_masonry_grid__column > div { /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 30px;
+  }

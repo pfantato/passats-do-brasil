@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import dragSlider from "../utils/dragSlider";
+import Masonry from 'react-masonry-css'
 
 import styles from './blog-post.module.css';
 console.log(styles)
@@ -24,6 +24,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   //   const items = document.getElementsByClassName('super-slider_item');
   //   dragSlider(slider, wrapper, bar, items);
   // });
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    700: 2,
+    500: 1
+  };
 
   return (
     <Layout location={location} style={styles.layout} title={title} description={description}>
@@ -43,11 +49,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <h2>Imagens</h2>
         <div className={styles.images_grid}>
-          {images.sort(( a, b ) => (( a.name < b.name ) ? -1 : ( a.name > b.name ) ? 1 : 0)).map((image, index) => (
-            <div className={styles.images_grid__image} key={index}>
-              <Img alt={image.name} fluid={image.childImageSharp.fluid} />
-            </div>
-          ))}
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className={styles.my_masonry_grid}
+            columnClassName={styles.my_masonry_grid__column}>
+              {images.sort(( a, b ) => (( a.name < b.name ) ? -1 : ( a.name > b.name ) ? 1 : 0)).map((image, index) => (
+                <div className={styles.images_grid__image} key={index}>
+                  <Img alt={image.name} fluid={image.childImageSharp.fluid} />
+                </div>
+              ))}
+          </Masonry>
         </div>
       </article>
 
