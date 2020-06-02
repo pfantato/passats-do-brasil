@@ -1,18 +1,16 @@
 ---
-title: Passat 86/87 laranja monza
+title: Passat 84/84 azul copa
 date: "2020-05-16T14:45:00.000Z"
-description: Passat 14
-value: R$ 39.990,00
+description: Passat 18
+value: R$ 69.990,00
 featuredImage: Foto 1.jpeg
 ---
 
 ## Descrição técnica
 
-Passat Special, 1986/1987, Laranja Monza, com 160.000km rodados, lataria lisa com vincos perfeitamente alinhados, pintura  original sem retoques, nenhum tipo de colisão, KPOs originais, interior original com tecido dos bancos substituídos seguindo o padrão, todos os componentes como faróis, lanternas, grades ou demais acabamentos totalmente originais, , mecânica com justo funcionamento em sua configuração original, suspensão, freios Revisados.
-Observação: Alguns acessórios foram instalados durante sua vida  pelos proprietários anteriores, como Console do GTS Pointer e Borrachões laterais. Com o objetivo de manter a historia do veiculo, essess foram mantidos.
+Passat Plus 1984/1984, azul copa, com 280.000 km rodados, lataria lisa com vincos perfeitamente alinhados, pintura externa refeita, nenhum tipo de colisão, KPOs originais, tapeçaria interior original, todos os componentes como faróis, lanternas, grades ou demais acabamentos totalmente originais, rodas com supercalotas datadas, mecânica com justo funcionamento em sua configuração original, suspensão, freios revisados.
+Observação: Não possui manual, chave reserva e nota fiscal de compra. 
 
- 
+## Historia
 
-## História
-
-O passat Special era o modelo básico disponibilizado pela VW primordialmente ao atendimento dos taxistas. A versão não possuía nenhum tipo acessório, vinham de fabrica com vidros brancos, parabrisas sem degrade, vigia sem desembaçador,  sem sistema de aquecimento interno, laterais de porta em courvim e alguns com bancos baixos. Esse veiculo foi produzido na cor Laranja Monza para atendimento do mercado de Curitiba. Por conta da raridade vinculada a cor e modelo, atrelada a originalidade por se tratar de um carro utilizado na época como taxi, esse veiculo passou a ser parte integrante da coleção.
+Edição lançada pela VW apenas no segundo semestre de 1984. Este modelo levava o motor 1.8 com cabeçote de válvulas sem o comando G ( o motor não era o 1.8S, ainda não levava denominação AP) com o interior, carpete, laterais de porta, forração de teto e bancos na cor azul, volante de 4 raios do GTS Pointer e rodas aro 13 com supercalotas, faróis com máscaras e frisos na cor preta. Suas laterais possuíam adesivos imitando os borrachões e um pequeno filete vermelho que contornava a lateral do carro, detalhes que tornavam o carro exclusivo na época. Por conta da raridade vinculada ao modelo, esse veículo passou a ser parte integrante da coleção.
