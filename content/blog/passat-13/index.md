@@ -2,7 +2,7 @@
 title: Passat 78/78 cinza grafite metálico
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 21
-value: R$ 59.990,00
+value: R$ 69.990,00
 featuredImage: Foto 1.jpg
 ---
 

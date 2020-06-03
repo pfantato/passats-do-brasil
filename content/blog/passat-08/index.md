@@ -2,7 +2,7 @@
 title: Passat 88/89 prata cristal
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 23
-value: R$ 159.990,00
+value: Valor sob consulta
 featuredImage: Foto 1.jpeg
 ---
 

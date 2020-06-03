@@ -15,15 +15,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const description = data.site.siteMetadata.description;
   const { previous, next } = pageContext
   const images = data.images.images; 
-
-  // useEffect(() => {
-  //   // Update the document title using the browser API
-  //   const slider = document.getElementById('slider');
-  //   const wrapper = document.getElementById('slider_wrapper');
-  //   const bar = document.getElementById('slider-indicator_bar');
-  //   const items = document.getElementsByClassName('super-slider_item');
-  //   dragSlider(slider, wrapper, bar, items);
-  // });
+  
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
