@@ -96,13 +96,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         value
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
     images: allFile(filter: {extension: {in: ["jpg", "png", "jpeg"]}, relativeDirectory: {eq: $relativePath}}) {

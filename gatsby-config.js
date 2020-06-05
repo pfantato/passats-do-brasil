@@ -5,8 +5,36 @@ module.exports = {
     siteUrl: `https://passatsdobrasil.com.br/`
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    { 
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        develop: true, // Enable while using `gatsby develop`
+        // tailwind: true, // Enable tailwindcss support
+        // whitelist: ['whitelist'], // Don't remove this selector
+        // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
+        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-web-vitals',
+      options: {
+        // The Google Analytics property ID; the reporting code won't be generated without it
+        trackingId: 'UA-168228104-1',
+        // An array with metrics you want to track and send to analytics
+        metrics: [`FID`, `TTFB`, `LCP`, `CLS`, `FCP`],
+        // Event Category (optional) { string }, default 'Web Vitals'
+        eventCategory: 'Performance',
+        // Include Web Vitals tracking in development
+        // Defaults to false meaning Vitals will only be tracked in production.
+        includeInDevelopment: false,
+        // Prints metrics in the console when true
+        debug: false,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,7 +79,7 @@ module.exports = {
         trackingId: `UA-168228104-1`,
       },
     },
-    `gatsby-plugin-feed`,
+    // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
