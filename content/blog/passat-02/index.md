@@ -4,6 +4,7 @@ date: "2020-05-16T14:45:00.000Z"
 description: Passat 24
 value: R$ 89.990,00
 featuredImage: Foto 1.jpeg
+order: 2
 ---
 
 ## Descrição técnica

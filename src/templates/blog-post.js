@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from 'gatsby-image';
 
@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 import Masonry from 'react-masonry-css'
 
 import styles from './blog-post.module.css';
-console.log(styles)
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -66,7 +65,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
           <li>
             {previous && (
-              <Link className={styles.bottom_navbar__link} className={styles.bottom_navbar__link__next} to={previous.fields.slug} rel="next">
+              <Link className={styles.bottom_navbar__link__next} to={previous.fields.slug} rel="next">
                 {previous.frontmatter.title} &gt;
               </Link>
             )}

@@ -4,6 +4,7 @@ date: "2020-05-16T14:45:00.000Z"
 description: Passat 8
 value: Valor sob consulta
 featuredImage: Foto 1.jpeg
+order: 4
 ---
 
 ## Descrição técnica

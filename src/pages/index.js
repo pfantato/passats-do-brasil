@@ -24,12 +24,10 @@ const BlogIndex = ({ data, location }) => {
         </nav>
         <section className={styles.cars_grid__content}>
           {posts.sort(( a, b ) => {
-            console.log(a.node.fields.slug);
-            return (( a.node.fields.slug < b.node.fields.slug ) ? -1 : ( a.node.fields.slug > b.node.fields.slug ) ? 1 : 0)
+            return (( a.node.frontmatter.order < b.node.frontmatter.order ) ? -1 : ( a.node.frontmatter.order > b.node.frontmatter.order ) ? 1 : 0)
           }).map(({ node }, index) => {
             const title = node.frontmatter.title || node.fields.slug
             const price = node.frontmatter.value || 'Sob consulta'
-            // console.log(featuredImage);
             const featuredImage = node.frontmatter.featuredImage
             const image = featuredImage ? <Image filename={ featuredImage?.relativeDirectory + `/` + featuredImage?.childImageSharp.fluid.originalName } className={styles.cars_grid__content__car__figure__image} /> : '';
             return (
@@ -69,6 +67,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             value
+            order
             featuredImage {
               name
               relativeDirectory
