@@ -2,7 +2,7 @@
 title: Passat 81/81 marrom avelã
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 26
-value: Valor sob consulta
+value: Indisponível
 featuredImage: Foto 1.jpeg
 order: 15
 ---

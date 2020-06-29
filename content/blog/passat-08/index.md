@@ -2,7 +2,7 @@
 title: Passat 88/89 prata cristal
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 23
-value: Valor sob consulta
+value: Indisponível
 featuredImage: Foto 1.jpeg
 order: 8
 ---

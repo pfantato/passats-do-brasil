@@ -2,7 +2,7 @@
 title: Passat 84/84 azul copa
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 18
-value: Valor sob consulta
+value: Indisponível
 featuredImage: Foto 1.jpeg
 order: 16
 ---

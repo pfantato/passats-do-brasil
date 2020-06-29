@@ -2,7 +2,7 @@
 title: Passat 87/88 branco alpino
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 8
-value: Valor sob consulta
+value: Indisponível
 featuredImage: Foto 1.jpeg
 order: 4
 ---
@@ -14,4 +14,4 @@ Observação: Possui manual, chave reserva e alarme Volks acessórios.
 
 ## História
 
-Na década de 80 os veículos disponibilizados na cor branca eram vistos com desdenho pelos consumidores. Na maioria das regiões do Brasil essa cor era utilizada pelos frotistas, o que levava o mercado, na maioria das vezes a desconsiderar a possibilidade de compra de um veículo com essa cor, pois “era carro de taxista”! Assim, comprar um passat GTS pointer na cor branca naquela época...era coisa para louco! Por conta disso poucas unidades foram fabricadas na cor branca e, neste caso especifico, em que o modelo ainda veio equipado de fábrica com teto solar e ar condicionado era coisa de loco ao quadrado, pois os acessórios acresciam em quase 50% o valor do carro. Especula-se que pouquíssimas unidades foram fabricadas nessa configuração, tornando o veiculo raríssimo.
+Na década de 80 os veículos disponibilizados na cor branca eram vistos com desdenho pelos consumidores. Na maioria das regiões do Brasil essa cor era utilizada pelos frotistas, o que levava o mercado, na maioria das vezes a desconsiderar a possibilidade de compra de um veículo com essa cor, pois “era carro de taxista”! Assim, comprar um passat GTS pointer na cor branca naquela época...era coisa para louco! Por conta disso poucas unidades foram fabricadas na cor branca e, neste caso especifico, em que o modelo ainda veio equipado de fábrica com teto solar e ar condicionado era coisa de louco ao quadrado, pois os acessórios acresciam em quase 50% o valor do carro. Especula-se que pouquíssimas unidades foram fabricadas nessa configuração, tornando o veículo raríssimo.
