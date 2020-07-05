@@ -14,6 +14,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const description = data.site.siteMetadata.description;
   const { previous, next } = pageContext
   const images = data.images.images; 
+
+  const mail = {
+    subject: encodeURIComponent(`Interesse no ${post.frontmatter.title}`),
+    body: encodeURIComponent(`Oi, tudo bem?\n\nMe chamo {SEU NOME AQUI} e gostaria de saber mais informações sobre o ${post.frontmatter.title} que vi no site.\n\nPode entrar em contato comigo através {SUAS INFORMAÇÕES DE CONTATO}`)
+  }
   
   const breakpointColumnsObj = {
     default: 4,
@@ -38,6 +43,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className={styles.ctaWrapper}>
+          <a href={`mailto:passatsdobrasil@gmail.com?subject=${mail.subject}&body=${mail.body}`} className={styles.cta} >Ficou interessado?</a>
+        </div>
         <h2>Imagens</h2>
         <div className={styles.images_grid}>
           <Masonry
@@ -52,6 +60,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </Masonry>
         </div>
       </article>
+
+      <div className={styles.ctaWrapper}>
+        <a href={`mailto:passatsdobrasil@gmail.com?subject=${mail.subject}&body=${mail.body}`} className={styles.cta} >Quer ter esse carro na sua garagem?</a>
+      </div>
 
 
       <nav>
