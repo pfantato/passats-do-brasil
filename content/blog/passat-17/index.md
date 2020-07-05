@@ -2,7 +2,7 @@
 title: Passat 86/86 cinza prata
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 19
-value: R$ 59.990,00
+value: Valor sob consulta.
 featuredImage: Foto 1.jpeg
 order: 17
 ---

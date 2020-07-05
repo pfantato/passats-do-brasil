@@ -2,7 +2,7 @@
 title: Passat 87/88 preto ônix
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 7
-value: R$ 89.990,00
+value: Valor sob consulta.
 featuredImage: Foto 1.jpeg
 order: 5
 ---

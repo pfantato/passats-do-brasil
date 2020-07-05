@@ -2,7 +2,7 @@
 title: Passat 86/86 cinza plus
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 13
-value: R$ 79.990,00
+value: Valor sob consulta.
 featuredImage: Foto 1.jpeg
 order: 1
 ---
