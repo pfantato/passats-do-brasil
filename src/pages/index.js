@@ -27,7 +27,7 @@ const BlogIndex = ({ data, location }) => {
             return (( a.node.frontmatter.order < b.node.frontmatter.order ) ? -1 : ( a.node.frontmatter.order > b.node.frontmatter.order ) ? 1 : 0)
           }).map(({ node }, index) => {
             const title = node.frontmatter.title || node.fields.slug
-            const price = node.frontmatter.value || 'Sob consulta'
+            // const price = node.frontmatter.value || 'Sob consulta'
             const featuredImage = node.frontmatter.featuredImage
             const image = featuredImage ? <Image filename={ featuredImage?.relativeDirectory + `/` + featuredImage?.childImageSharp.fluid.originalName } className={styles.cars_grid__content__car__figure__image} /> : '';
             return (
@@ -37,7 +37,7 @@ const BlogIndex = ({ data, location }) => {
                 </Link>
                 <Link className={styles.cars_grid__content__car__description} to={node.fields.slug}>
                   <h2 className={styles.cars_grid__content__car__description__car_name}>{title}</h2>
-                  <p className={styles.cars_grid__content__car__description__car_price}>{price}</p>
+                  {/* <p className={styles.cars_grid__content__car__description__car_price}>{price}</p> */}
                 </Link>
               </div>
             )})}
@@ -66,7 +66,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            value
             order
             featuredImage {
               name

@@ -38,9 +38,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1 className={styles.carName}>
             {post.frontmatter.title}
           </h1>
-          <p className={styles.carValue}>
+          {/* <p className={styles.carValue}>
             {post.frontmatter.value}
-          </p>
+          </p> */}
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className={styles.ctaWrapper}>
