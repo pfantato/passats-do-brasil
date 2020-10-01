@@ -3,7 +3,7 @@ title: Passat 87/87 vermelho fenix
 date: "2020-05-16T14:45:00.000Z"
 description: Passat 9
 value: Valor sob consulta.
-featuredImage: Foto 1.jpeg
+featuredImage: Foto 1.png
 order: 3
 ---
 
