@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  devcontainer:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    image: passats_do_brasil:latest
+    environment:
+      PORT: 3000
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ..:/usr/src/app
+    networks:
+      - passats_do_brasil
+    command: sleep infinity
+
+volumes:
+  passats_do_brasil-vscode-extensions:
+  passats_do_brasil-zshhistory:
+networks:
+  passats_do_brasil:
